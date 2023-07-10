@@ -1,34 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useEffect} from 'react';
+import './App.css';
+import {gsap} from 'gsap';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  useEffect(() => {
+    gsap.to('h1', {
+      top: 0,
+      opacity: 1,
+      ease: 'power4.out',
+      stagger: 0.5,
+    });
+  }, []);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="header bg-[#0a0a0a] w-full h-full fixed flex items-center justify-center text-white flex-col">
+        <h1 className="text-6xl font-bold relative">Any fool can write code</h1>
+        <h1 className="text-6xl font-bold relative">that a computer can</h1>
+        <h1 className="text-6xl font-bold relative">understand.</h1>
+        <h1 className="text-6xl font-bold relative">Good programmers</h1>
+        <h1 className="text-6xl font-bold relative">write code that</h1>
+        <h1 className="text-6xl font-bold relative">humans can understand.</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
