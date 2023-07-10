@@ -1,3 +1,4 @@
 {
+  "ignorePatterns": ["dist/**/*", "vite.*"],
   "extends": "./node_modules/gts/"
 }
