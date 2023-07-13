@@ -18,8 +18,11 @@ function App() {
   }, []);
   return (
     <>
-      <div className="splash bg-[#0a0a0a] w-full h-full fixed flex items-center justify-center text-white flex-col">
+      <div className="splash bg-[#0a0a0a] w-full h-full fixed flex items-center justify-center text-white flex-col z-10">
         <h1 className="text-6xl font-bold relative uppercase">Hamza</h1>
+      </div>
+      <div className='z-0 text-black'>
+        <h1>Hallo</h1>
       </div>
     </>
   );
